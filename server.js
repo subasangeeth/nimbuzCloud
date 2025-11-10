@@ -5,11 +5,9 @@ const PORT = process.env.PORT || 8080;
 app.get("/", (req, res) => {
   const html = `
   <!DOCTYPE html>
-  <html lang="en">
+  <html>
   <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orange App</title>
     <style>
       body {
         background-color: #fff7f0;
@@ -40,3 +38,4 @@ app.get("/", (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
