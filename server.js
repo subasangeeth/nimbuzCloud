@@ -5,9 +5,11 @@ const PORT = process.env.PORT || 8080;
 app.get("/", (req, res) => {
   const html = `
   <!DOCTYPE html>
-  <html>
+  <html lang="en">
   <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orange App</title>
     <style>
       body {
         background-color: #fff7f0;
@@ -23,23 +25,19 @@ app.get("/", (req, res) => {
         border: 2px solid #ffa500;
         padding: 20px 40px;
         border-radius: 15px;
+        box-shadow: 0 0 10px rgba(255,165,0,0.3);
         background: white;
       }
     </style>
   </head>
   <body>
-    <h1>Hello Nimbuz Cloud!</h1>
+    <h1> Hello Nimbuz Cloud!</h1>
   </body>
   </html>
   `;
   res.send(html);
 });
 
-const PORT = process.env.PORT || 8080;
-app.listen(PORT, () => console.log(`Server running on ${PORT}`));
-
-
-  
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`✅ Server is running on port ${PORT}`);
 });
-
-
